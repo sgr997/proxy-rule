@@ -70,7 +70,7 @@ proxy-providers:
   Subscribe:
     <<: *a1
     #url: https://pqjc.site/api/v1/client/subscribe?token=cb7a2173c7e4716836bcbe35ee996652&flag=meta|https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=54aadd7d4fbcf8c5945558cf28546323
-    url: https://api.nexconvert.com/sub?target=clash&url=https://pqjc.site/api/v1/client/subscribe?token=cb7a2173c7e4716836bcbe35ee996652&flag=meta|https://sub1.smallstrawberry.com/api/v1/client/subscribe?token=54aadd7d4fbcf8c5945558cf28546323&emoji=true&list=true&new_name=true&udp=false
+    url: https://api.nexconvert.com/sub?target=clash&url=https%3A%2F%2Fpqjc.site%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3Dcb7a2173c7e4716836bcbe35ee996652%26flag%3Dmeta%7Chttps%3A%2F%2Fsub1.smallstrawberry.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D54aadd7d4fbcf8c5945558cf28546323&emoji=true&list=true&new_name=true&udp=false
     # URL后面填写格式1[单一订阅]: 直接填写你的机场Clash订阅[推荐此种方式，避免订阅泄露]
     # URL后面填写格式2[多个订阅]：https://api.nexconvert.com/sub?target=clash&url=请手动填入你的订阅(多机场订阅用|分割即可)&emoji=true&list=true&new_name=true&udp=false
     path: ./proxy_providers/tmp.yaml
