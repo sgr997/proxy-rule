@@ -71,6 +71,12 @@ rules:
   - RULE-SET,Bahamut,📺 哔哩哔哩
   - RULE-SET,GlobalMedia,🎬 国际媒体
   - RULE-SET,Apple,🍎 苹果服务
+  - DOMAIN-SUFFIX,uu.163.com,DIRECT
+  - DOMAIN-SUFFIX,uuremote.com,DIRECT
+  - DOMAIN-SUFFIX,uuyun.net,DIRECT
+  - DOMAIN-SUFFIX,netease.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,mumu.163.com,DIRECT
   - DOMAIN-SUFFIX,cn.bing.com,DIRECT
   - DOMAIN-SUFFIX,bing.com.cn,DIRECT
   - RULE-SET,Github,🌏 全球加速
