@@ -4,6 +4,24 @@
 # Loon [Remote Rule] 订阅行:
 #   https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/GokuCF.list, tag=GokuCF, policy=策略组名, enabled=true
 # 同步维护：goku_cf_proxy.yaml（Clash Party 同名单）
+DOMAIN-SUFFIX,bee.goku.top
 DOMAIN-SUFFIX,cpa.goku.top
-DOMAIN-SUFFIX,webdav.goku.top
+DOMAIN-SUFFIX,dash.goku.top
+DOMAIN-SUFFIX,dav.goku.top
+DOMAIN-SUFFIX,fn.goku.top
+DOMAIN-SUFFIX,health.goku.top
+DOMAIN-SUFFIX,hermes.goku.top
+DOMAIN-SUFFIX,hindsight.goku.top
+DOMAIN-SUFFIX,local.goku.top
+DOMAIN-SUFFIX,lx.goku.top
+DOMAIN-SUFFIX,mapi.goku.top
+DOMAIN-SUFFIX,miniapp.goku.top
+DOMAIN-SUFFIX,newapi.goku.top
+DOMAIN-SUFFIX,qinglong.goku.top
+DOMAIN-SUFFIX,server.goku.top
+DOMAIN-SUFFIX,status.goku.top
+DOMAIN-SUFFIX,summarize.goku.top
+DOMAIN-SUFFIX,usage.goku.top
+DOMAIN-SUFFIX,vault.goku.top
 DOMAIN-SUFFIX,wb2.goku.top
+DOMAIN-SUFFIX,webdav.goku.top
