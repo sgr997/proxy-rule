@@ -8,7 +8,9 @@
 | --- | --- | --- |
 | `clash.yaml` | 通过 `proxy-providers` 拉取机场订阅 | Clash Verge 及其他支持 proxy-providers 的 Clash 内核 |
 | `clash_party.yaml` | `include-all` 直接引用客户端内订阅节点 | Mihomo Party（Clash Party） |
+| `goku_cf_proxy.yaml` | goku.top 自家 CF 托管域名（直连慢）走代理，Clash rule-provider | Mihomo Party（Clash Party） |
 | `loon/Ai.list` | AI 服务分流远程规则，共 101 条 | Loon |
+| `loon/GokuCF.list` | goku.top 自家 CF 托管域名（直连慢）走代理 | Loon |
 
 ## Clash 配置
 
@@ -40,6 +42,15 @@ https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/Ai.list, tag=AI, p
 ```
 
 数据源为墨鱼的 [Ai.yaml](https://ddgksf2013.top/filter/Ai.yaml)，当前是 2026-09-30 版本的转换快照；上游更新后需重新转换同步，规则本身不会自动更新。
+
+## goku.top 自家域名走代理（GokuCF）
+
+部署在 Cloudflare 上的自家服务（Workers / Pages，如 `webdav.goku.top`、`wb2.goku.top`），国内直连慢，走代理更快。这两个文件维护同一份域名清单，改一处必须同步另一处：
+
+- `goku_cf_proxy.yaml` — Clash Party 用，`clash_party.yaml` 里已注册为 rule-provider `GokuProxy`，规则 `RULE-SET,GokuProxy,🌏 全球加速`
+- `loon/GokuCF.list` — Loon 用，填进 `[Remote Rule]`：`https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/GokuCF.list, tag=GokuCF, policy=策略组名, enabled=true`
+
+**新增 CF 服务后**：把新域名加进两个文件（`DOMAIN-SUFFIX,<域名>`）→ commit + push。Clash Party 侧还需手动刷新 override 缓存并 reload（远程拉取周期很长）；Loon 侧远程规则集会自行拉取。
 
 ## 注意
 
