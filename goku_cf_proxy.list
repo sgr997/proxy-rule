@@ -1,0 +1,7 @@
+# goku.top CF 托管服务域名（直连慢，走代理加速）
+# 这是 Loon 的远程规则集文件，一行一条规则
+# 更新步骤：加域名 → git commit + push → Loon 端远程规则集会自动拉取（或手动刷新）
+# Loon 订阅地址: https://raw.githubusercontent.com/sgr997/proxy-rule/main/goku_cf_proxy.list
+# 同步维护：goku_cf_proxy.yaml（Clash Party 同名单）
+DOMAIN-SUFFIX,webdav.goku.top
+DOMAIN-SUFFIX,wb2.goku.top

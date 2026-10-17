@@ -61,6 +61,7 @@ rule-providers:
   Download:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml,                  path: ./ruleset/Download.yaml     }
   Bing:        {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml,                          path: ./ruleset/Bing.yaml        }
   ChinaIP:     {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,                                     path: ./ruleset/ChinaIP.yaml      }
+  GokuProxy:   {<<: *a6, url: https://raw.githubusercontent.com/sgr997/proxy-rule/main/goku_cf_proxy.yaml,                               path: ./ruleset/GokuProxy.yaml    }
 
 
 # 分流Policy
@@ -71,6 +72,7 @@ rules:
   - RULE-SET,Bahamut,📺 哔哩哔哩
   - RULE-SET,GlobalMedia,🎬 国际媒体
   - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,GokuProxy,🌏 全球加速
   - DOMAIN-SUFFIX,uu.163.com,DIRECT
   - DOMAIN-SUFFIX,uuremote.com,DIRECT
   - DOMAIN-SUFFIX,uuyun.net,DIRECT

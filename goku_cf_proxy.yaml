@@ -1,0 +1,7 @@
+# goku.top CF 托管服务域名（直连慢，走代理加速）
+# 这是 Clash Party (mihomo) 的 rule-provider 文件，classical 格式
+# 更新步骤：加域名 → git commit + push → 手动更新 Clash Party override 缓存 → mihomo reload
+# 同步维护：goku_cf_proxy.list（Loon 同名单）
+payload:
+  - DOMAIN-SUFFIX,webdav.goku.top
+  - DOMAIN-SUFFIX,wb2.goku.top
