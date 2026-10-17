@@ -3,5 +3,6 @@
 # 更新步骤：加域名 → git commit + push → 手动更新 Clash Party override 缓存 → mihomo reload
 # 同步维护：loon/GokuCF.list（Loon 同名单）
 payload:
+  - DOMAIN-SUFFIX,cpa.goku.top
   - DOMAIN-SUFFIX,webdav.goku.top
   - DOMAIN-SUFFIX,wb2.goku.top
