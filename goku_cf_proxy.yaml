@@ -4,6 +4,7 @@
 # 同步维护：loon/GokuCF.list（Loon 同名单）
 payload:
   - DOMAIN-SUFFIX,bee.goku.top
+  - DOMAIN-SUFFIX,cloudflareaccess.com
   - DOMAIN-SUFFIX,cpa.goku.top
   - DOMAIN-SUFFIX,dash.goku.top
   - DOMAIN-SUFFIX,dav.goku.top

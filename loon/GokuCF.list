@@ -5,6 +5,7 @@
 #   https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/GokuCF.list, tag=GokuCF, policy=策略组名, enabled=true
 # 同步维护：goku_cf_proxy.yaml（Clash Party 同名单）
 DOMAIN-SUFFIX,bee.goku.top
+DOMAIN-SUFFIX,cloudflareaccess.com
 DOMAIN-SUFFIX,cpa.goku.top
 DOMAIN-SUFFIX,dash.goku.top
 DOMAIN-SUFFIX,dav.goku.top
