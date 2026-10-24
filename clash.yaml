@@ -122,6 +122,7 @@ rule-providers:
 rules:
   - RULE-SET,Ad,🆎 AdBlock
   - RULE-SET,OpenAi,🤖 OpenAi
+  - DOMAIN-SUFFIX,z.ai,🇭🇰 香港节点
   - RULE-SET,BiliBili,📺 哔哩哔哩
   - RULE-SET,Bahamut,📺 哔哩哔哩
   - RULE-SET,GlobalMedia,🎬 国际媒体
