@@ -6,7 +6,6 @@ payload:
   - DOMAIN-SUFFIX,cloudflareaccess.com
   - DOMAIN-SUFFIX,cpa.goku.top
   - DOMAIN-SUFFIX,dash.goku.top
-  - DOMAIN-SUFFIX,dav.goku.top
   - DOMAIN-SUFFIX,hindsight.goku.top
   - DOMAIN-SUFFIX,local.goku.top
   - DOMAIN-SUFFIX,lx.goku.top
@@ -15,9 +14,9 @@ payload:
   - DOMAIN-SUFFIX,usage.goku.top
   - DOMAIN-SUFFIX,vault.goku.top
   - DOMAIN-SUFFIX,wb2.goku.top
-  - DOMAIN-SUFFIX,webdav.goku.top
   - DOMAIN-SUFFIX,wyy.goku.top
   - DOMAIN-SUFFIX,agent2api.goku.top
   - DOMAIN-SUFFIX,xhx2api.goku.top
   - DOMAIN-SUFFIX,nav.goku.top
   - DOMAIN-SUFFIX,skills.goku.top
+  - DOMAIN-SUFFIX,webdav.goku.top
