@@ -11,6 +11,7 @@
 | `goku_cf_proxy.yaml` | goku.top 自家 CF 托管域名（直连慢）走代理，Clash rule-provider | Mihomo Party（Clash Party） |
 | `loon/Ai.list` | AI 服务分流远程规则，共 101 条 | Loon |
 | `loon/GokuCF.list` | goku.top 自家 CF 托管域名（直连慢）走代理 | Loon |
+| `loon/BilibiliAPI.list` | B 站接口域名，用于出口 IP 被风控时换代理 | Loon |
 
 ## Clash 配置
 
@@ -42,6 +43,18 @@ https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/Ai.list, tag=AI, p
 ```
 
 数据源为墨鱼的 [Ai.yaml](https://ddgksf2013.top/filter/Ai.yaml)，当前是 2026-09-30 版本的转换快照；上游更新后需重新转换同步，规则本身不会自动更新。
+
+## B 站接口走代理（BilibiliAPI）
+
+所在网络出口 IP 被 B 站风控（搜索空列表、-352、412）时，只把接口域名换到代理出口：
+
+```
+https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/BilibiliAPI.list, tag=BilibiliAPI, policy=策略组名, enabled=true
+```
+
+规则只含 `api.bilibili.com` 等 8 条接口域名。`bilivideo.com`（音频直链）、`hdslb.com`（封面）**必须保持直连**：这些域解析到国内联通电信镜像，直连 6-16MB/s，走海外代理会掉到几百 KB/s，播放一直缓冲。playurl 返回的直链带 `upsig` 签名，与出口 IP 无关，换代理不影响播放。
+
+节点优先国内或香港，B 站对海外 IP 的风控比国内家庭宽带更严。
 
 ## goku.top 自家域名走代理（GokuCF）
 

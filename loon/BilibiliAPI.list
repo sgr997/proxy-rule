@@ -1,0 +1,23 @@
+# B 站 API 域名（只代理接口，不含视频/图片 CDN）
+# 用途：所在网络出口 IP 被 B 站风控时，把接口请求换到代理出口，其余照直连
+#
+# 只放真实发请求的域：听屿插件里的 search/space/www.bilibili.com 只拼进 referer 头，
+# 不发请求；s1.hdslb.com 是封面图，直连。
+#
+# 为什么不放 CDN：
+#   bilivideo.com / hdslb.com 解析到国内联通电信的镜像和 mcdn 节点，直连 6-16MB/s，
+#   走海外代理只剩几百 KB/s，播放会一直缓冲。playurl 返回的直链带 upsig，与出口 IP 无关，
+#   换不换代理都能直连播放。
+#
+# Loon [Remote Rule] 订阅行（策略组填一个真代理组，填 DIRECT 等于没加）：
+#   https://raw.githubusercontent.com/sgr997/proxy-rule/main/loon/BilibiliAPI.list, tag=BilibiliAPI, policy=策略组名, enabled=true
+#
+# 节点选择：优先国内/香港，B 站对海外 IP 的风控比国内家庭宽带更严
+DOMAIN-SUFFIX,api.bilibili.com
+DOMAIN-SUFFIX,app.bilibili.com
+DOMAIN-SUFFIX,api.live.bilibili.com
+DOMAIN-SUFFIX,passport.bilibili.com
+DOMAIN-SUFFIX,api.biliapi.net
+DOMAIN-SUFFIX,grpc.biliapi.net
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,biliapi.com
