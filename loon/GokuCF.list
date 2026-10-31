@@ -23,3 +23,5 @@ DOMAIN-SUFFIX,nav.goku.top
 DOMAIN-SUFFIX,skills.goku.top
 DOMAIN-SUFFIX,mag.goku.top
 DOMAIN-SUFFIX,webdav.goku.top
+# linux.do：直连超时（CF 盾被墙），必须走代理
+DOMAIN-SUFFIX,linux.do
