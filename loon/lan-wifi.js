@@ -18,12 +18,10 @@ const DEFAULT_PORTS = {
   'nav.goku.top': 7870,
   'cpa.goku.top': 8317,
   'dash.goku.top': 8899,
-  'skills.goku.top': 8899,
   'hindsight.goku.top': 9999,
   'vault.goku.top': 7788,
   'wb2.goku.top': 7863,
   'xhx2api.goku.top': 7867,
-  'agent2api.goku.top': 3065,
 };
 const PORTS = { ...DEFAULT_PORTS };
 String(options.services || '')
