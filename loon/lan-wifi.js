@@ -21,7 +21,6 @@ const DEFAULT_PORTS = {
   'skills.goku.top': 8899,
   'hindsight.goku.top': 9999,
   'vault.goku.top': 7788,
-  'wyy.goku.top': 3050,
   'lx.goku.top': 9527,
   'wb2.goku.top': 7863,
   'xhx2api.goku.top': 7867,
