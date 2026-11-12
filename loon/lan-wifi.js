@@ -5,7 +5,7 @@
  * 需要 MITM 证书信任，以及 Loon 本地网络权限。
  * 局域网 HTTP 明文传输凭据，仅用于可信网络。
  */
-const VERSION = 'lan-wifi v1';
+const VERSION = 'lan-wifi v2';
 const options = typeof $argument === 'object' && $argument ? $argument : {};
 
 const HOME_WIFIS = String(options.homeWifi || '')
@@ -22,6 +22,7 @@ const DEFAULT_PORTS = {
   'vault.goku.top': 7788,
   'wb2.goku.top': 7863,
   'xhx2api.goku.top': 7867,
+  'multica.goku.top': 3000,
 };
 const PORTS = { ...DEFAULT_PORTS };
 String(options.services || '')
@@ -56,14 +57,23 @@ try {
   const ssid = readSSID(config);
   const validIp = /^(?:\d{1,3}\.){3}\d{1,3}$/.test(LAN_IP);
   let host = '';
-  try { host = new URL($request.url).hostname.toLowerCase(); } catch (e) { host = ''; }
+  let path = '';
+  try {
+    const target = new URL($request.url);
+    host = target.hostname.toLowerCase();
+    path = target.pathname;
+  } catch (e) { host = ''; path = ''; }
   const port = PORTS[host];
 
   console.log('[' + VERSION + '] ssid=' + JSON.stringify(ssid)
     + ' configured=' + HOME_WIFIS.length + ' ip=' + validIp + ' host=' + (host || '-')
     + ' port=' + (port || '-'));
 
-  if (!HOME_WIFIS.length || !validIp || !port || !HOME_WIFIS.includes(ssid)) {
+  if (/^\/ws(\/|$)/.test(path)) {
+    // WebSocket 是长连接，$httpClient 拿不到 Upgrade 握手，改写必然断连。
+    console.log('[' + VERSION + '] KEEP: websocket path ' + path);
+    finish({});
+  } else if (!HOME_WIFIS.length || !validIp || !port || !HOME_WIFIS.includes(ssid)) {
     console.log('[' + VERSION + '] KEEP: network, ip or host not matched');
     finish({});
   } else {
